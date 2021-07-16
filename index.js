@@ -5,21 +5,30 @@
 function findMatching(drivers, name){
     const driverVar =  drivers.filter(function(driverName){
         console.log(driverName.toLowerCase());
-     driverName.toLowerCase() === name.toLowerCase()
+     return driverName.toLowerCase() === name.toLowerCase()
    })  
     console.log(drivers)
     return driverVar;
 }
-//(function (pizza) { return name === pizza; })
 
-findMatching(drivers, 'Bobby');
 
-/*
-function fuzzyMatch(){
-
+function fuzzyMatch(carDrivers, firstLet){
+ const newDriver = carDrivers.filter(function (driver){
+      return driver.startsWith(firstLet) 
+ });
+return newDriver;
 }
 
-function matchName(){
 
+
+
+
+function matchName(drivers, firstName){
+  const test =  drivers.filter( function (object){
+    return object.name === firstName
+        
+ });
+ return test;
 }
-*/
+
+
